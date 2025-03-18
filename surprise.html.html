@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Surprise for Nandini ❤</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Great+Vibes&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Great Vibes', cursive;
+      text-align: center;
+      background: linear-gradient(to right, #ff758c, #ff7eb3);
+      color: white;
+      padding: 20px;
+      overflow-x: hidden;
+      position: relative;
+    }
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+    .message {
+      font-size: 28px;
+      color: #ff1493;
+      margin-top: 20px;
+    }
+    .big-heart {
+      margin-top: 20px;
+      width: 120px;
+      height: 120px;
+      background-color: red;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      clip-path: polygon(50% 15%, 90% 0, 100% 40%, 50% 100%, 0 40%, 10% 0);
+      animation: heartbeat 1s infinite alternate;
+    }
+    @keyframes heartbeat {
+      0% { transform: scale(1) translateX(-50%); }
+      100% { transform: scale(1.3) translateX(-50%); }
+    }
+    .balloon {
+      position: absolute;
+      width: 30px;
+      height: 40px;
+      background-color: red;
+      border-radius: 50%;
+      animation: float 5s linear infinite;
+    }
+    @keyframes float {
+      0% { transform: translateY(0); opacity: 1; }
+      100% { transform: translateY(-600px); opacity: 0; }
+    }
+    .firework {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: yellow;
+      border-radius: 50%;
+      animation: explode 1s linear forwards;
+    }
+    @keyframes explode {
+      0% { transform: scale(1); opacity: 1; }
+      100% { transform: scale(5); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Surprise, Nandini! ❤</h1>
+    <div class="message">No matter the distance, you are always in my heart 💗</div>
+    <div class="big-heart"></div>
+  </div>
+
+  <script>
+    function launchCelebration() {
+      // Create Balloons
+      for (let i = 0; i < 10; i++) {
+        let balloon = document.createElement("div");
+        balloon.className = "balloon";
+        balloon.style.left = Math.random() * 100 + "vw";
+        balloon.style.backgroundColor = ["red", "pink", "purple"][Math.floor(Math.random() * 3)];
+        document.body.appendChild(balloon);
+        setTimeout(() => { balloon.remove(); }, 5000);
+      }
+      // Create Fireworks
+      for (let i = 0; i < 10; i++) {
+        let firework = document.createElement("div");
+        firework.className = "firework";
+        firework.style.left = Math.random() * 100 + "vw";
+        firework.style.top = Math.random() * 100 + "vh";
+        firework.style.backgroundColor = hsl(${Math.random() * 360}, 100%, 50%);
+        document.body.appendChild(firework);
+        setTimeout(() => { firework.remove(); }, 1000);
+      }
+    }
+    window.onload = launchCelebration;
+  </script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For You, Nandini ❤</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Great+Vibes&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Great Vibes', cursive;
+      text-align: center;
+      background: linear-gradient(to right, #ff758c, #ff7eb3);
+      color: white;
+      padding: 20px;
+      overflow-x: hidden;
+    }
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+    h2 {
+      font-family: 'Dancing Script', cursive;
+      color: #ffcccb;
+    }
+    .question {
+      margin: 20px 0;
+    }
+    select, button {
+      padding: 10px;
+      margin-top: 10px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: none;
+    }
+    button {
+      background-color: #ff4081;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #e91e63;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Hey Nandini! ❤</h1>
+    <p>Answer these questions to unlock a special surprise!</p>
+
+    <!-- Questions -->
+    <div class="question">
+      <h2>1. Which nickname do I secretly love calling you?</h2>
+      <select id="q1">
+        <option value="">Select an answer</option>
+        <option value="a">My sunshine</option>
+        <option value="b">Cutiepie</option>
+        <option value="c">Nandu</option>
+        <option value="d">Lovebug</option>
+      </select>
+    </div>
+
+    <div class="question">
+      <h2>2. What’s my favorite thing about you?</h2>
+      <select id="q2">
+        <option value="">Select an answer</option>
+        <option value="a">Your smile</option>
+        <option value="b">Your voice</option>
+        <option value="c">Your eyes</option>
+        <option value="d">Everything about you</option>
+      </select>
+    </div>
+
+    <div class="question">
+      <h2>3. If I could steal one thing from you, what would it be?</h2>
+      <select id="q3">
+        <option value="">Select an answer</option>
+        <option value="a">Your heart</option>
+        <option value="b">Your hoodie</option>
+        <option value="c">Your favorite food</option>
+        <option value="d">Your sleep</option>
+      </select>
+    </div>
+
+    <div class="question">
+      <h2>4. If we were in a movie, what would our genre be?</h2>
+      <select id="q4">
+        <option value="">Select an answer</option>
+        <option value="a">Romantic comedy</option>
+        <option value="b">Adventure love story</option>
+        <option value="c">Drama with intense emotions</option>
+        <option value="d">A fairytale romance</option>
+      </select>
+    </div>
+
+    <button onclick="checkAnswers()">Submit</button>
+  </div>
+
+  <script>
+    function checkAnswers() {
+      let q1 = document.getElementById("q1").value;
+      let q2 = document.getElementById("q2").value;
+      let q3 = document.getElementById("q3").value;
+      let q4 = document.getElementById("q4").value;
+
+      // Correct answers: Q1: "c" (Nandu), Q2: "d" (Everything about you), Q3: "a" (Your heart), Q4: "b" (Adventure love story)
+      if (q1 === "c" && q2 === "d" && q3 === "a" && q4 === "b") {
+        // Redirect to the surprise page
+        window.location.href = "surprise.html";
+      } else {
+        alert("Oops! Try again, my love ❤");
+      }
+    }
+  </script>
+</body>
+</html>
